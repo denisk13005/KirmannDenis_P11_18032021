@@ -1,0 +1,26 @@
+@import '../settings';
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 68px;
+  border: 1px solid red;
+  margin-top: 60px;
+  ul {
+    display: flex;
+    a {
+      color: $color-primary;
+      text-decoration: none;
+      list-style-type: none;
+      font-size: 24px;
+      margin-left: 57px;
+      &:visited {
+        text-decoration: none;
+      }
+    }
+  }
+  .nav__active {
+    text-decoration-line: underline;
+    text-underline-offset: 2px;
+  }
+}
