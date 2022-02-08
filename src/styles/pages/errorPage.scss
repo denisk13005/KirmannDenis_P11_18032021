@@ -1,3 +1,22 @@
-body {
-  color: rgb(172, 15, 15);
+@import '../settings';
+.error__container {
+  color: $color-primary;
+  text-align: center;
+  margin: 0;
+
+  h1 {
+    font-size: 288px;
+    color: $color-primary;
+    margin: 186px 0px 0px;
+  }
+  p {
+    margin: 66px 0px 0px;
+  }
+  a {
+    list-style-type: none;
+    color: $color-primary;
+  }
+  .return {
+    margin-top: 182px;
+  }
 }
