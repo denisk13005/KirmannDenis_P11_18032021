@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom'
 import { Routes, Route, BrowserRouter } from 'react-router-dom'
 import Home from './pages/Home'
 import ErrorPage from './pages/ErrorPage'
-import './styles/index.css'
 ReactDOM.render(
   <BrowserRouter>
     <Routes>
