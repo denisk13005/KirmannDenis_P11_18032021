@@ -7,16 +7,32 @@
   h1 {
     font-size: 288px;
     color: $color-primary;
-    margin: 186px 0px 0px;
+    margin: 140px 0px 0px;
+    @media screen and (max-width: 1200px) {
+      font-size: 144px;
+    }
+    @media screen and (max-width: 485px) {
+      font-size: 96px;
+    }
   }
   p {
     margin: 66px 0px 0px;
+    @media screen and (max-width: 1200px) {
+      font-size: 36px;
+    }
+    @media screen and (max-width: 485px) {
+      font-size: 18px;
+    }
   }
   a {
     list-style-type: none;
     color: $color-primary;
   }
   .return {
-    margin-top: 182px;
+    margin-top: 122px;
+    font-size: 18px;
+    @media screen and (max-width: 485px) {
+      font-size: 14px;
+    }
   }
 }
