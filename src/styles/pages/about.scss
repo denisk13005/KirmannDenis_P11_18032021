@@ -1,0 +1,16 @@
+@import '../settings';
+.banner {
+  width: 86%;
+  height: 223px;
+  margin: auto;
+  margin-top: 44px;
+  border-radius: 25px;
+  overflow: hidden;
+  background-image: url('../../assets/aboutBig.jpg');
+  @media screen and (max-width: 840px) {
+    background-image: url('../../assets/about.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}
