@@ -2,13 +2,14 @@
 body {
   font-size: 48px;
   .container {
-    width: 87%;
-    border: $border2;
+    display: flex;
+    justify-content: space-evenly;
+    width: auto;
+    max-width: 87%;
+    height: auto;
     background-color: $color-secondary;
     border-radius: 25px;
-    display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
     padding-top: 56px;
   }
 }

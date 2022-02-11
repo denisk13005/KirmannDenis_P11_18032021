@@ -8,15 +8,14 @@ const AccommodationCard = (accommodation) => {
       className={'link__container'}
       to={'/accommodation/#' + accommodation.accommodation.id}
     >
-      {/* <div className="img__container">
+      <div className="img__container">
         <img
           src={accommodation.accommodation.cover}
           alt={'img ' + accommodation.accommodation.title}
           className="img"
         />
       </div>
-      <p>{accommodation.accommodation.title}</p> */}
-      t
+      <p>{accommodation.accommodation.title}</p>
     </NavLink>
   )
 }
