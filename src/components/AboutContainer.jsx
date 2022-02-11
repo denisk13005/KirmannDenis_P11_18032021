@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import arrow from '../assets/arrow.svg'
 import '../styles/components/aboutContainer.scss'
 
-const AboutContainer = (el) => {
+const AboutContainer = ({ el }) => {
   const [isActive, setIsActive] = useState(false)
 
   const toggle = () => {
@@ -11,7 +11,7 @@ const AboutContainer = (el) => {
   return (
     <div className="aboutContainer">
       <div className="headerAboutContainer">
-        <p>{el.el.title}</p>
+        <p>{el.title}</p>
         <img
           className={!isActive ? 'active' : 'notActive'}
           onClick={toggle}
@@ -20,7 +20,7 @@ const AboutContainer = (el) => {
         />
       </div>
       <div className={isActive ? 'visible' : 'notVisible'}>
-        {el.el.description}
+        {el.description}
       </div>
     </div>
   )

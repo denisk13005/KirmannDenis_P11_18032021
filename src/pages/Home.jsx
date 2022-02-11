@@ -19,8 +19,8 @@ const Home = () => {
         <img src={imageBanner} alt="" />
       </div>
       <div className="homeContainer">
-        {accommodations.map((accommodation) => (
-          <AccommodationCard accommodation={accommodation} />
+        {accommodations.map((accommodation, index) => (
+          <AccommodationCard key={index} accommodation={accommodation} />
         ))}
       </div>
 

@@ -1,0 +1,10 @@
+@import '../settings.scss';
+
+.lightbox__container {
+  width: 87%;
+  height: 415px;
+  margin: auto;
+  border-radius: 25px;
+  margin-top: 26px;
+  border: $border1;
+}

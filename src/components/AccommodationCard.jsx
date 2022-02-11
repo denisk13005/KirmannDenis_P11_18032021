@@ -2,20 +2,20 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import '../styles/components/accommodationCard.scss'
 
-const AccommodationCard = (accommodation) => {
+const AccommodationCard = ({ accommodation }) => {
   return (
     <NavLink
       className={'link__container'}
-      to={'/accommodation/#' + accommodation.accommodation.id}
+      to={'/accommodation/#' + accommodation.id}
     >
       <div className="img__container">
         <img
-          src={accommodation.accommodation.cover}
-          alt={'img ' + accommodation.accommodation.title}
+          src={accommodation.cover}
+          alt={'img ' + accommodation.title}
           className="img"
         />
       </div>
-      <p>{accommodation.accommodation.title}</p>
+      <p>{accommodation.title}</p>
     </NavLink>
   )
 }
