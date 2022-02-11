@@ -9,7 +9,7 @@ const AboutContainer = (el) => {
     isActive ? setIsActive(false) : setIsActive(true)
   }
   return (
-    <div className="container">
+    <div className="aboutContainer">
       <div className="headerAboutContainer">
         <p>{el.el.title}</p>
         <img
