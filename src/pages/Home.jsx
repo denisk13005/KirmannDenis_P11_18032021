@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import AccommodationCard from '../components/AccommodationCard'
 import Footer from '../components/Footer'
 import Header from '../components/Header'
+import imageBanner from '../assets/backgroundHome.png'
 import '../styles/pages/home.scss'
 const Home = () => {
   const [accommodations, setAccommodations] = useState([])
@@ -14,7 +15,10 @@ const Home = () => {
   return (
     <div>
       <Header />
-      <div className="container">
+      <div className="homeBanner">
+        <img src={imageBanner} alt="" />
+      </div>
+      <div className="homeContainer">
         {accommodations.map((accommodation) => (
           <AccommodationCard accommodation={accommodation} />
         ))}

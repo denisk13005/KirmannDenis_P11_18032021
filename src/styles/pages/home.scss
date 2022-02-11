@@ -1,7 +1,20 @@
 @import '../settings';
 body {
   font-size: 48px;
-  .container {
+  .homeBanner {
+    width: 87%;
+    height: 223px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 25px;
+    margin-top: 50px;
+    margin-bottom: 43px;
+    img {
+      width: 100%;
+    }
+  }
+  .homeContainer {
+    margin: auto;
     display: flex;
     justify-content: space-evenly;
     width: auto;
