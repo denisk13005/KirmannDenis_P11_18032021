@@ -16,10 +16,8 @@ const About = () => {
     <div>
       <Header />
       <div className="banner"></div>
-      {aboutDatas.map((el) => (
-        <div>
-          <AboutContainer props={el} />
-        </div>
+      {aboutDatas.map((el, index) => (
+        <AboutContainer key={index} props={el} />
       ))}
       <Footer />
     </div>

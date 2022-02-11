@@ -1,0 +1,24 @@
+@import '../settings.scss';
+.container {
+  border: $border1;
+  width: 87%;
+  margin: auto;
+  .headerAboutContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    img {
+      padding: 16px 30px;
+      cursor: pointer;
+      transition: transform 0.2s ease-in-out;
+    }
+    .active {
+      transform: rotate(180deg);
+    }
+    p {
+      margin: 0;
+      padding: 5px 18px;
+      font-size: 24px;
+    }
+  }
+}
