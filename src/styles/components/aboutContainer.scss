@@ -1,24 +1,41 @@
 @import '../settings.scss';
 .container {
-  border: $border1;
   width: 87%;
   margin: auto;
+  font-size: 24px;
+  position: relative;
+  margin-top: 30px;
   .headerAboutContainer {
     display: flex;
     justify-content: space-between;
     width: 100%;
+    background-color: $color-primary;
+    border-radius: 5px;
     img {
       padding: 16px 30px;
       cursor: pointer;
       transition: transform 0.2s ease-in-out;
     }
-    .active {
+    .notActive {
       transform: rotate(180deg);
     }
     p {
       margin: 0;
       padding: 5px 18px;
-      font-size: 24px;
+      color: white;
     }
+  }
+
+  .visible {
+    transition: transform 0.2s;
+    background-color: $color-secondary;
+    color: $color-primary;
+    border-radius: 0px 0px 5px 5px;
+    margin-top: -2px;
+    padding: 36px 18px;
+  }
+  .notVisible {
+    transform: scale(0);
+    position: absolute;
   }
 }
