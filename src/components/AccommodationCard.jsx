@@ -1,15 +1,23 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 import '../styles/components/accommodationCard.scss'
 
-const AccommodationCard = (props) => {
-  console.log(props.props.title)
+const AccommodationCard = (accommodation) => {
   return (
-    <div className="accommodationCard__container">
-      <div className="img__container">
-        <img src={props.props.cover} alt="" />
+    <NavLink
+      className={'link__container'}
+      to={'/accommodation/#' + accommodation.accommodation.id}
+    >
+      {/* <div className="img__container">
+        <img
+          src={accommodation.accommodation.cover}
+          alt={'img ' + accommodation.accommodation.title}
+          className="img"
+        />
       </div>
-      <h5>{props.props.title}</h5>
-    </div>
+      <p>{accommodation.accommodation.title}</p> */}
+      t
+    </NavLink>
   )
 }
 

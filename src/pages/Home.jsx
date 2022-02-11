@@ -1,19 +1,25 @@
 import React, { useEffect, useState } from 'react'
+import AccommodationCard from '../components/AccommodationCard'
 import Footer from '../components/Footer'
 import Header from '../components/Header'
 import '../styles/pages/home.scss'
 const Home = () => {
-  const [Accommodations, setAccommodations] = useState()
+  const [accommodations, setAccommodations] = useState([])
   useEffect(() => {
     fetch('./data/datas.json')
       .then((response) => response.json())
       .then((data) => setAccommodations(data.accommodations))
   }, [])
-  console.log(Accommodations)
+  console.log(accommodations)
   return (
     <div>
       <Header />
-      <h1>Accueil</h1>
+      <div className="container">
+        {accommodations.map((accommodation) => (
+          <AccommodationCard accommodation={accommodation} />
+        ))}
+      </div>
+
       <Footer />
     </div>
   )

@@ -3,7 +3,6 @@ import arrow from '../assets/arrow.svg'
 import '../styles/components/aboutContainer.scss'
 
 const AboutContainer = (el) => {
-  console.log(el)
   const [isActive, setIsActive] = useState(false)
 
   const toggle = () => {
