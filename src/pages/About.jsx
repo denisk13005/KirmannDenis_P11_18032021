@@ -9,7 +9,6 @@ const About = () => {
       <Header />
       <div className="banner"></div>
       <div>About</div>
-      <Footer />
     </div>
   )
 }
