@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import AccommodationCard from '../components/AccommodationCard'
 import Footer from '../components/Footer'
 import Header from '../components/Header'
+import background from '../assets/backgroundHome.png'
 import '../styles/pages/home.scss'
 const Home = () => {
   const [accommodations, setAccommodations] = useState([])
@@ -15,7 +16,9 @@ const Home = () => {
     <div>
       <Header />
       <div className="homeBanner">
-        <div className="img__container"></div>
+        <div className="bannerImg__container">
+          <img src={background} alt="bannière" />
+        </div>
         <p>Chez vous, partout et ailleurs</p>
       </div>
       <div className="homeContainer">

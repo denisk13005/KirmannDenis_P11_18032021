@@ -11,7 +11,7 @@ const AccommodationCard = ({ accommodation }) => {
       <div className="img__container">
         <img
           src={accommodation.cover}
-          alt={'img ' + accommodation.title}
+          alt={'image ' + accommodation.title}
           className="img"
         />
       </div>
