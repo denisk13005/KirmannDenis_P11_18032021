@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
+import AboutContainer from '../components/AboutContainer'
 import Footer from '../components/Footer'
 import Header from '../components/Header'
+import Lightbox from '../components/Lightbox'
 import '../styles/pages/accommodation.scss'
 
 const Accommodation = () => {
@@ -22,8 +24,9 @@ const Accommodation = () => {
   return (
     <div>
       <Header />
-      <div className="lightbox__container">t</div>
-      <Footer />
+      <Lightbox accommodation={accommodation} />
+
+      {/* <Footer /> */}
     </div>
   )
 }
