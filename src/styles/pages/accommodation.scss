@@ -1,2 +1,30 @@
 @import '../settings.scss';
-
+.accommodationTitleAndImg {
+  margin: auto;
+  border: $border1;
+  width: 87%;
+  display: flex;
+  justify-content: space-between;
+  h2 {
+    font-size: 18px;
+  }
+  &__title {
+    color: $color-primary;
+    h1 {
+      font-size: 36px;
+    }
+  }
+  &__img {
+    display: flex;
+    align-items: center;
+    h2 {
+      width: min-content;
+      color: $color-primary;
+    }
+    img {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+    }
+  }
+}
