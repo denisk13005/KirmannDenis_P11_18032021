@@ -11,10 +11,18 @@
     width: 100%;
     background-color: $color-primary;
     border-radius: 5px;
+    @media screen and (max-width: 840px) {
+      height: 30px;
+      font-size: 13px;
+    }
     img {
       padding: 16px 30px;
       cursor: pointer;
       transition: transform 0.2s ease-in-out;
+      @media screen and (max-width: 1180px) {
+        padding: 10px;
+        width: 15px;
+      }
     }
     .notActive {
       transform: rotate(180deg);
