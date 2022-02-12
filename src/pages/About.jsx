@@ -19,7 +19,6 @@ const About = () => {
       {aboutDatas.map((el, index) => (
         <AboutContainer key={index} el={el} />
       ))}
-      <Footer />
     </div>
   )
 }

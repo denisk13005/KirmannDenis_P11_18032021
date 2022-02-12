@@ -19,6 +19,9 @@
     .notActive {
       transform: rotate(180deg);
     }
+    .notActive2 {
+      transform: rotate(180deg);
+    }
     p {
       margin: 0;
       padding: 5px 18px;
@@ -34,7 +37,23 @@
     margin-top: -2px;
     padding: 36px 18px;
   }
+  .visible2 {
+    transition: transform 0.2s;
+    background-color: $color-secondary;
+    color: $color-primary;
+    border-radius: 0px 0px 5px 5px;
+    margin-top: -2px;
+    padding: 36px 18px;
+
+    li {
+      list-style-type: none;
+    }
+  }
   .notVisible {
+    transform: scale(0);
+    position: absolute;
+  }
+  .notVisible2 {
     transform: scale(0);
     position: absolute;
   }

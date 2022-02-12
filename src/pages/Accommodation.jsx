@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import Header from '../components/Header'
 import Lightbox from '../components/Lightbox'
+import RentalInformations from '../components/RentalInformations'
+import ErrorPage from '../pages/ErrorPage'
 import '../styles/pages/accommodation.scss'
 
 const Accommodation = () => {
@@ -17,23 +19,16 @@ const Accommodation = () => {
         )
       )
   }, [])
-  console.log(accommodation)
+  const rentalInformations =
+    accommodation.host !== undefined ? (
+      <RentalInformations accommodation={accommodation} />
+    ) : null
 
   return (
     <div>
       <Header />
       <Lightbox accommodation={accommodation} />
-      <div className="accommodationTitleAndImg">
-        <div className="accommodationTitleAndImg__title">
-          <h1>{accommodation.title}</h1>
-          <h2>{accommodation.location}</h2>
-        </div>
-        <div className="accommodationTitleAndImg__img">
-          <h2>{accommodation.host.name}</h2>
-          <img src={accommodation.host.picture} alt="" />
-        </div>
-      </div>
-
+      {rentalInformations}
       {/* <Footer /> */}
     </div>
   )
