@@ -24,9 +24,11 @@ const Home = () => {
         </div>
       </div>
       <div className="homeContainer">
-        {accommodations.map((accommodation, index) => (
-          <AccommodationCard key={index} accommodation={accommodation} />
-        ))}
+        {accommodations !== undefined
+          ? accommodations.map((accommodation, index) => (
+              <AccommodationCard key={index} accommodation={accommodation} />
+            ))
+          : null}
       </div>
 
       <Footer />
