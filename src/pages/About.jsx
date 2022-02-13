@@ -11,7 +11,6 @@ const About = () => {
       .then((response) => response.json())
       .then((data) => setAboutData(data.about))
   }, [])
-  console.log(aboutDatas)
   return (
     <div>
       <Header />
