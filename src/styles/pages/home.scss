@@ -14,6 +14,7 @@ body {
     color: white;
     @media screen and (max-width: 840px) {
       height: 111px;
+      margin-bottom: 22px;
     }
     &__title {
       position: absolute;
@@ -71,8 +72,10 @@ body {
     border-radius: 25px;
     flex-wrap: wrap;
     padding-top: 56px;
+
     @media screen and (max-width: 840px) {
       background-color: transparent;
+      padding-top: 0;
     }
   }
   .footer {
