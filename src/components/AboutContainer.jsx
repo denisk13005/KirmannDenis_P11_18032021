@@ -56,8 +56,8 @@ const AboutContainer = ({ el }) => {
           />
         </div>
         <div className={isActive2 ? 'visible2' : 'notVisible2'}>
-          {el.equipments.map((el) => (
-            <li key={el.id}>{el}</li>
+          {el.equipments.map((el, index) => (
+            <li key={index}>{el}</li>
           ))}
         </div>
       </div>
