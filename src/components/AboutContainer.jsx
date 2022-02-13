@@ -4,7 +4,6 @@ import '../styles/components/aboutContainer.scss'
 
 const AboutContainer = ({ el }) => {
   const page = el.id ? 'accommodation' : 'about' //si l'élément a un id alors on est sur la page des logements
-  console.log(page)
   const [isActive, setIsActive] = useState(false)
   const [isActive2, setIsActive2] = useState(false)
 

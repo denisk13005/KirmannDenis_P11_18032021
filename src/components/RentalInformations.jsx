@@ -1,13 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 import AboutContainer from './AboutContainer'
 import greyStar from '../assets/greyStar.svg'
 import pinkStar from '../assets/pinkStar.svg'
 
 const RentalInformations = ({ accommodation }) => {
-  // for (let i = 0; i < accommodation.rating; i++) {
-
-  // }
-  // console.log(accommodation.rating)
+  const nbOfPinkStars = []
+  for (let i = 0; i < accommodation.rating; i++) {
+    nbOfPinkStars.push(pinkStar)
+  }
+  let nbOfGreyStars = []
+  for (let i = 0; i < 5 - accommodation.rating; i++) {
+    nbOfGreyStars.push(greyStar)
+  }
   return (
     <div className="rentalInformations">
       <div className="informations">
@@ -28,11 +32,16 @@ const RentalInformations = ({ accommodation }) => {
             ))}
           </ul>
           <div className="stars">
-            <img src={pinkStar} alt="" />
-            <img src={pinkStar} alt="" />
-            <img src={pinkStar} alt="" />
-            <img src={greyStar} alt="" />
-            <img src={greyStar} alt="" />
+            <div className="pinkStars">
+              {nbOfPinkStars.map((el) => (
+                <img src={el} alt="étoile rose" />
+              ))}
+            </div>
+            <div className="greyStars">
+              {nbOfGreyStars.map((el) => (
+                <img src={el} alt="étoile rose" />
+              ))}
+            </div>
           </div>
         </div>
       </div>
