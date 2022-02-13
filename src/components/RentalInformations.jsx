@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import AboutContainer from './AboutContainer'
 import greyStar from '../assets/greyStar.svg'
 import pinkStar from '../assets/pinkStar.svg'
