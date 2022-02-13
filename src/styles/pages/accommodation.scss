@@ -54,6 +54,7 @@
   .tagsAndStars {
     display: flex;
     justify-content: space-between;
+
     .tags {
       list-style-type: none;
       text-decoration: none;
@@ -61,6 +62,7 @@
       margin: 0;
       padding: 0;
       flex-wrap: wrap;
+      margin-top: 5px;
 
       li {
         display: flex;
@@ -88,6 +90,7 @@
       height: 35px;
       display: flex;
       align-items: center;
+      margin-bottom: 5px;
 
       img {
         @media screen and (max-width: 1180px) {

@@ -33,13 +33,13 @@ const RentalInformations = ({ accommodation }) => {
           </ul>
           <div className="stars">
             <div className="pinkStars">
-              {nbOfPinkStars.map((el) => (
-                <img src={el} alt="étoile rose" />
+              {nbOfPinkStars.map((el, index) => (
+                <img key={index} src={el} alt="étoile rose" />
               ))}
             </div>
             <div className="greyStars">
-              {nbOfGreyStars.map((el) => (
-                <img src={el} alt="étoile rose" />
+              {nbOfGreyStars.map((el, index) => (
+                <img key={index} src={el} alt="étoile rose" />
               ))}
             </div>
           </div>
