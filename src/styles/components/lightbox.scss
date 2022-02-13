@@ -6,6 +6,7 @@
   border-radius: 25px;
   margin-top: 26px;
   overflow: hidden;
+  position: relative;
   @media screen and (max-width: 840px) {
     height: 255px;
   }
@@ -14,5 +15,23 @@
     height: 100%;
     object-fit: cover;
     object-position: left center;
+  }
+  .rightArrow {
+    cursor: pointer;
+    position: absolute;
+    right: 23px;
+    top: 50%;
+    width: 47px;
+    height: 80px;
+    transform: translateY(-50%);
+  }
+  .leftArrow {
+    cursor: pointer;
+    position: absolute;
+    left: 23px;
+    top: 50%;
+    width: 47px;
+    height: 80px;
+    transform: translateY(-50%) rotate(180deg);
   }
 }
