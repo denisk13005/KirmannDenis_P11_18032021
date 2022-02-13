@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import Header from '../components/Header'
+import Footer from '../components/Footer'
 import Lightbox from '../components/Lightbox'
 import RentalInformations from '../components/RentalInformations'
-import ErrorPage from '../pages/ErrorPage'
 import '../styles/pages/accommodation.scss'
 
 const Accommodation = () => {
@@ -19,17 +19,17 @@ const Accommodation = () => {
         )
       )
   }, [])
-  const rentalInformations =
-    accommodation.host !== undefined ? (
-      <RentalInformations accommodation={accommodation} />
-    ) : null
 
   return (
     <div>
       <Header />
-      <Lightbox accommodation={accommodation} />
-      {rentalInformations}
-      {/* <Footer /> */}
+      {accommodation.pictures !== undefined ? (
+        <Lightbox accommodation={accommodation} />
+      ) : null}
+      {accommodation.host !== undefined ? (
+        <RentalInformations accommodation={accommodation} />
+      ) : null}
+      <Footer />
     </div>
   )
 }

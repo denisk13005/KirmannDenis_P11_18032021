@@ -19,7 +19,10 @@ const Home = () => {
         <div className="bannerImg__container">
           <img src={background} alt="bannière" />
         </div>
-        <p>Chez vous, partout et ailleurs</p>
+        <div className="homeBanner__title">
+          <p>Chez vous,</p>
+          <p>partout et ailleurs</p>
+        </div>
       </div>
       <div className="homeContainer">
         {accommodations.map((accommodation, index) => (
