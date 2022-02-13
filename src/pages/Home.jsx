@@ -11,7 +11,6 @@ const Home = () => {
       .then((response) => response.json())
       .then((data) => setAccommodations(data.accommodations))
   }, [])
-  console.log(accommodations)
   return (
     <div>
       <Header />

@@ -3,10 +3,7 @@ import rightArrow from '../assets/rightArrow.svg'
 import '../styles/components/lightbox.scss'
 
 const Lightbox = ({ accommodation }) => {
-  console.log(accommodation.pictures)
   let [currentIndex, setCurrentIndex] = useState(0)
-  console.log(currentIndex)
-  console.log(accommodation.pictures.length)
 
   const next = () => {
     setCurrentIndex(currentIndex + 1)
@@ -21,13 +18,11 @@ const Lightbox = ({ accommodation }) => {
     }
   }
   return (
-    <>
-      <div className="lightbox__container">
-        <img src={accommodation.pictures[currentIndex]} alt="" />
-        <img onClick={next} className="rightArrow" src={rightArrow} alt="" />
-        <img onClick={previous} className="leftArrow" src={rightArrow} alt="" />
-      </div>
-    </>
+    <div className="lightbox__container">
+      <img src={accommodation.pictures[currentIndex]} alt="" />
+      <img onClick={next} className="rightArrow" src={rightArrow} alt="" />
+      <img onClick={previous} className="leftArrow" src={rightArrow} alt="" />
+    </div>
   )
 }
 
