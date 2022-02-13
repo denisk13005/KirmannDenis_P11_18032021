@@ -17,11 +17,15 @@ const Lightbox = ({ accommodation }) => {
       setCurrentIndex(accommodation.pictures.length - 1)
     }
   }
+
   return (
     <div className="lightbox__container">
       <img src={accommodation.pictures[currentIndex]} alt="" />
       <img onClick={next} className="rightArrow" src={rightArrow} alt="" />
       <img onClick={previous} className="leftArrow" src={rightArrow} alt="" />
+      <p>
+        {currentIndex + 1}/{accommodation.pictures.length}
+      </p>
     </div>
   )
 }
