@@ -68,7 +68,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        border: $border1;
         width: max-content;
         min-width: 115px;
         height: 25px;
@@ -78,6 +77,7 @@
         border-radius: 10px;
         margin-right: 10px;
         margin-bottom: 10px;
+        padding: 0px 5px;
         @media screen and (max-width: 840px) {
           min-width: 84px;
           height: 18px;
