@@ -4,6 +4,7 @@ import Footer from '../components/Footer'
 import Header from '../components/Header'
 import background from '../assets/backgroundHome.png'
 import '../styles/pages/home.scss'
+import Banner from '../components/Banner'
 const Home = () => {
   const [accommodations, setAccommodations] = useState([])
   useEffect(() => {
@@ -14,7 +15,7 @@ const Home = () => {
   return (
     <div>
       <Header />
-      <div className="homeBanner">
+      {/* <div className="homeBanner">
         <div className="bannerImg__container">
           <img src={background} alt="bannière" />
         </div>
@@ -22,7 +23,8 @@ const Home = () => {
           <p>Chez vous,</p>
           <p>partout et ailleurs</p>
         </div>
-      </div>
+      </div> */}
+      <Banner background={background} />
       <div className="homeContainer">
         {accommodations !== undefined
           ? accommodations.map((accommodation, index) => (
