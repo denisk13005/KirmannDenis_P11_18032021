@@ -2,65 +2,6 @@
 body {
   font-size: 48px;
 
-  // .homeBanner {
-  //   width: 87%;
-  //   height: 223px;
-  //   margin: auto;
-  //   overflow: hidden;
-  //   border-radius: 25px;
-  //   margin-top: 50px;
-  //   margin-bottom: 43px;
-  //   position: relative;
-  //   color: white;
-  //   @media screen and (max-width: 840px) {
-  //     height: 111px;
-  //     margin-bottom: 22px;
-  //   }
-  //   &__title {
-  //     position: absolute;
-  //     top: 50%;
-  //     left: 50%;
-  //     transform: translate(-50%, -50%);
-  //     display: flex;
-  //     @media screen and (max-width: 500px) {
-  //       flex-wrap: wrap;
-  //       left: 10%;
-  //       transform: translate(0%, -50%);
-  //     }
-
-  //     p {
-  //       width: max-content;
-  //       text-align: center;
-  //       margin: 0;
-  //       font-size: 48px;
-  //       @media screen and (max-width: 840px) {
-  //         font-size: 24px;
-  //         width: max-content;
-  //         text-align: left;
-  //       }
-  //     }
-  //   }
-
-  //   .bannerImg__container {
-  //     width: 100%;
-  //     height: 100%;
-  //     img {
-  //       width: 150%;
-  //       min-height: 100%;
-  //       object-fit: cover;
-  //     }
-  //     &::after {
-  //       content: '';
-  //       background-color: black;
-  //       opacity: 0.3;
-  //       width: 100%;
-  //       height: 100%;
-  //       position: absolute;
-  //       left: 0;
-  //       top: 0;
-  //     }
-  //   }
-  // }
   .homeContainer {
     margin: auto;
     display: flex;

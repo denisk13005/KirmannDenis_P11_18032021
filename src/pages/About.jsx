@@ -13,10 +13,14 @@ const About = () => {
   const getSize = () => {
     setViewportWidth(window.innerWidth)
   }
-  window.addEventListener('resize', getSize)
-  console.log(viewportWidth)
   let backgroundImgBanner = viewportWidth < 840 ? about : aboutBig
   const [aboutDatas, setAboutData] = useState([])
+  useEffect(() => {
+    window.addEventListener('resize', getSize)
+
+    return () => window.removeEventListener('resize', getSize)
+  }, [])
+
   useEffect(() => {
     fetch('./data/datas.json')
       .then((response) => response.json())

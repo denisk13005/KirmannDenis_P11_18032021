@@ -12,19 +12,15 @@ const Home = () => {
       .then((response) => response.json())
       .then((data) => setAccommodations(data.accommodations))
   }, [])
+  const text = {
+    chezvous: 'Chez vous,',
+    partout: 'partout et ailleurs',
+  }
   return (
     <div>
       <Header />
-      {/* <div className="homeBanner">
-        <div className="bannerImg__container">
-          <img src={background} alt="bannière" />
-        </div>
-        <div className="homeBanner__title">
-          <p>Chez vous,</p>
-          <p>partout et ailleurs</p>
-        </div>
-      </div> */}
-      <Banner background={background} />
+
+      <Banner background={background} text={text} />
       <div className="homeContainer">
         {accommodations !== undefined
           ? accommodations.map((accommodation, index) => (
