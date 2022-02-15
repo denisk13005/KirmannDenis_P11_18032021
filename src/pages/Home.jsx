@@ -5,13 +5,13 @@ import Header from '../components/Header'
 import background from '../assets/backgroundHome.png'
 import '../styles/pages/home.scss'
 import Banner from '../components/Banner'
+import GetDatas from '../components/GetDatas'
+import Spinner from '../components/Spinner'
 const Home = () => {
-  const [accommodations, setAccommodations] = useState([])
-  useEffect(() => {
-    fetch('./data/datas.json')
-      .then((response) => response.json())
-      .then((data) => setAccommodations(data.accommodations))
-  }, [])
+  const datas = GetDatas()
+  const accommodations = datas.accommodations
+  console.log(accommodations)
+
   const text = {
     chezvous: 'Chez vous,',
     partout: 'partout et ailleurs',
@@ -22,14 +22,15 @@ const Home = () => {
 
       <Banner background={background} text={text} />
       <div className="homeContainer">
-        {accommodations !== undefined
-          ? accommodations.map((accommodation, index) => (
-              <AccommodationCard key={index} accommodation={accommodation} />
-            ))
-          : null}
+        {accommodations !== undefined ? (
+          accommodations.map((accommodation, index) => (
+            <AccommodationCard key={index} accommodation={accommodation} />
+          ))
+        ) : (
+          <Spinner />
+        )}
+        {accommodations ? <Footer /> : null}
       </div>
-
-      <Footer />
     </div>
   )
 }

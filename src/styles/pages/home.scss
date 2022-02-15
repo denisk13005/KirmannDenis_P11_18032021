@@ -1,8 +1,11 @@
 @import '../settings';
+@import '../utils/keyframes';
 body {
   font-size: 48px;
 
   .homeContainer {
+    // animation: timer 1s ease-in-out;
+
     margin: auto;
     display: flex;
     justify-content: space-evenly;
