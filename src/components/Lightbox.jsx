@@ -17,12 +17,26 @@ const Lightbox = ({ accommodation }) => {
       setCurrentIndex(accommodation.pictures.length - 1)
     }
   }
+  const rightArrowClassName =
+    accommodation.pictures.length !== 1 ? 'rightArrow' : null
+  let leftArrowClassName =
+    accommodation.pictures.length !== 1 ? 'leftArrow' : null
 
   return (
     <div className="lightbox__container">
       <img src={accommodation.pictures[currentIndex]} alt="" />
-      <img onClick={next} className="rightArrow" src={rightArrow} alt="" />
-      <img onClick={previous} className="leftArrow" src={rightArrow} alt="" />
+      <img
+        onClick={next}
+        className={rightArrowClassName}
+        src={rightArrow}
+        alt=""
+      />
+      <img
+        onClick={previous}
+        className={leftArrowClassName}
+        src={rightArrow}
+        alt=""
+      />
       <p>
         {currentIndex + 1}/{accommodation.pictures.length}
       </p>
