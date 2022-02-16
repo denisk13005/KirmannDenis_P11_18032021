@@ -10,7 +10,6 @@ import Spinner from '../components/Spinner'
 const Home = () => {
   const datas = GetDatas()
   const accommodations = datas.accommodations
-  console.log(accommodations)
 
   const text = {
     chezvous: 'Chez vous,',
