@@ -6,7 +6,7 @@ const GetDatas = () => {
       fetch('./data/datas.json')
         .then((res) => res.json())
         .then((datas) => setDatas(datas))
-    }, 1000)
+    }, 800)
     return () => clearTimeout(timer)
   }, [])
   let [datas, setDatas] = useState([])

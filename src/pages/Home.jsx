@@ -21,16 +21,15 @@ const Home = () => {
       <Header />
 
       <Banner background={background} text={text} />
-      <div className="homeContainer">
-        {accommodations !== undefined ? (
-          accommodations.map((accommodation, index) => (
+      {accommodations !== undefined ? (
+        <div className="homeContainer">
+          {accommodations.map((accommodation, index) => (
             <AccommodationCard key={index} accommodation={accommodation} />
-          ))
-        ) : (
-          <Spinner />
-        )}
-        {accommodations ? <Footer /> : null}
-      </div>
+          ))}
+        </div>
+      ) : (
+        <Spinner />
+      )}
     </div>
   )
 }

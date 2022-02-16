@@ -3,7 +3,8 @@ body {
   margin: 0;
   padding: 0;
   background: #262626;
-  z-index: 10;
+  position: relative;
+  height: 100vh;
 }
 .ring {
   position: absolute;
@@ -24,6 +25,7 @@ body {
   text-transform: uppercase;
   text-shadow: 0 0 10px $color-primary;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  margin-top: 150px;
 }
 .ring:before {
   content: '';
