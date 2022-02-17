@@ -1,5 +1,5 @@
 import React from 'react'
-import AboutContainer from './AboutContainer'
+import DropDown from './DropDown'
 import Stars from '../components/Stars'
 
 import Tags from './Tags'
@@ -24,7 +24,7 @@ const RentalInformations = ({ accommodation }) => {
         </div>
       </div>
       <div className="rantalContainers">
-        <AboutContainer el={accommodation} />
+        <DropDown el={accommodation} />
       </div>
     </section>
   )

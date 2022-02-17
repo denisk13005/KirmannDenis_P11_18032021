@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import '../styles/pages/about.scss'
-import AboutContainer from '../components/AboutContainer'
+import DropDown from '../components/DropDown'
 import Banner from '../components/Banner'
 import about from '../assets/about.jpg'
 import aboutBig from '../assets/aboutBig.jpg'
@@ -31,7 +31,7 @@ const About = () => {
       <Header />
       <Banner background={backgroundImgBanner} />
       {aboutDatas.map((el, index) => (
-        <AboutContainer key={index} el={el} />
+        <DropDown key={index} el={el} />
       ))}
       <Footer />
     </div>
