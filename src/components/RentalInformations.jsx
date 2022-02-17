@@ -1,5 +1,6 @@
 import React from 'react'
 import AboutContainer from './AboutContainer'
+import Stars from '../components/Stars'
 import greyStar from '../assets/greyStar.svg'
 import pinkStar from '../assets/pinkStar.svg'
 
@@ -25,25 +26,7 @@ const RentalInformations = ({ accommodation }) => {
             <img src={accommodation.host.picture} alt="" />
           </div>
         </div>
-        <div className="tagsAndStars">
-          <ul className="tags">
-            {accommodation.tags.map((el, index) => (
-              <li key={index}>{el}</li>
-            ))}
-          </ul>
-          <div className="stars">
-            <div className="pinkStars">
-              {nbOfPinkStars.map((el, index) => (
-                <img key={index} src={el} alt="étoile rose" />
-              ))}
-            </div>
-            <div className="greyStars">
-              {nbOfGreyStars.map((el, index) => (
-                <img key={index} src={el} alt="étoile rose" />
-              ))}
-            </div>
-          </div>
-        </div>
+        <Stars accommodation={accommodation} />
       </div>
       <div className="rantalContainers">
         <AboutContainer el={accommodation} />
