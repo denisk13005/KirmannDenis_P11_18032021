@@ -12,25 +12,16 @@ const stars = ({ accommodation }) => {
     nbOfGreyStars.push(greyStar)
   }
   return (
-    <div>
-      <div className="tagsAndStars">
-        <ul className="tags">
-          {accommodation.tags.map((el, index) => (
-            <li key={index}>{el}</li>
-          ))}
-        </ul>
-        <div className="stars">
-          <div className="pinkStars">
-            {nbOfPinkStars.map((el, index) => (
-              <img key={index} src={el} alt="étoile rose" />
-            ))}
-          </div>
-          <div className="greyStars">
-            {nbOfGreyStars.map((el, index) => (
-              <img key={index} src={el} alt="étoile rose" />
-            ))}
-          </div>
-        </div>
+    <div className="stars">
+      <div className="pinkStars">
+        {nbOfPinkStars.map((el, index) => (
+          <img key={index} src={el} alt="étoile rose" />
+        ))}
+      </div>
+      <div className="greyStars">
+        {nbOfGreyStars.map((el, index) => (
+          <img key={index} src={el} alt="étoile rose" />
+        ))}
       </div>
     </div>
   )

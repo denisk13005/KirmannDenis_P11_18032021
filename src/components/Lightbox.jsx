@@ -29,13 +29,13 @@ const Lightbox = ({ accommodation }) => {
         onClick={next}
         className={rightArrowClassName}
         src={rightArrow}
-        alt=""
+        alt="next"
       />
       <img
         onClick={previous}
         className={leftArrowClassName}
         src={rightArrow}
-        alt=""
+        alt="previous"
       />
       <p>
         {currentIndex + 1}/{accommodation.pictures.length}
