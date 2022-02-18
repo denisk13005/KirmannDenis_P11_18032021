@@ -23,7 +23,9 @@ const DropDown = (props) => {
         {props.rental
           ? props.title === 'Description'
             ? props.rental.description
-            : props.rental.equipments.map((el) => <li>{el}</li>)
+            : props.rental.equipments.map((el, index) => (
+                <li key={index}>{el}</li>
+              ))
           : props.about.description}
       </div>
     </div>
