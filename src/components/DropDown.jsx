@@ -7,8 +7,7 @@ const DropDown = (props) => {
   const toggle = () => {
     isActive ? setIsActive(false) : setIsActive(true)
   }
-  console.log(props.rental)
-  console.log(props.about)
+
   return (
     <div className="aboutContainer">
       <div className="headerAboutContainer">
