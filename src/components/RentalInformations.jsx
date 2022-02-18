@@ -1,19 +1,12 @@
 import React from 'react'
-import AboutContainer from './AboutContainer'
-import greyStar from '../assets/greyStar.svg'
-import pinkStar from '../assets/pinkStar.svg'
+import DropDown from './DropDown'
+import Stars from '../components/Stars'
+
+import Tags from './Tags'
 
 const RentalInformations = ({ accommodation }) => {
-  const nbOfPinkStars = []
-  for (let i = 0; i < accommodation.rating; i++) {
-    nbOfPinkStars.push(pinkStar)
-  }
-  let nbOfGreyStars = []
-  for (let i = 0; i < 5 - accommodation.rating; i++) {
-    nbOfGreyStars.push(greyStar)
-  }
   return (
-    <div className="rentalInformations">
+    <section className="rentalInformations">
       <div className="informations">
         <div className="accommodationTitleAndImg">
           <div className="accommodationTitleAndImg__title">
@@ -26,29 +19,15 @@ const RentalInformations = ({ accommodation }) => {
           </div>
         </div>
         <div className="tagsAndStars">
-          <ul className="tags">
-            {accommodation.tags.map((el, index) => (
-              <li key={index}>{el}</li>
-            ))}
-          </ul>
-          <div className="stars">
-            <div className="pinkStars">
-              {nbOfPinkStars.map((el, index) => (
-                <img key={index} src={el} alt="étoile rose" />
-              ))}
-            </div>
-            <div className="greyStars">
-              {nbOfGreyStars.map((el, index) => (
-                <img key={index} src={el} alt="étoile rose" />
-              ))}
-            </div>
-          </div>
+          <Tags tags={accommodation.tags} />
+          <Stars accommodation={accommodation} />
         </div>
       </div>
       <div className="rantalContainers">
-        <AboutContainer el={accommodation} />
+        <DropDown rental={accommodation} title="Description" />
+        <DropDown rental={accommodation} title="Équipements" />
       </div>
-    </div>
+    </section>
   )
 }
 

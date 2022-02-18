@@ -2,7 +2,6 @@
 body {
   margin: 0;
   padding: 0;
-  background: #262626;
   position: relative;
   height: 100vh;
 }
@@ -14,7 +13,7 @@ body {
   width: 150px;
   height: 150px;
   background: transparent;
-  border: 3px solid #3c3c3c;
+  border: 3px solid $color-secondary;
   border-radius: 50%;
   text-align: center;
   line-height: 150px;

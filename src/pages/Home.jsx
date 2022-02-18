@@ -9,7 +9,14 @@ import GetDatas from '../components/GetDatas'
 import Spinner from '../components/Spinner'
 const Home = () => {
   const datas = GetDatas()
-  const accommodations = datas.accommodations
+
+  const [accommodations, setAccommodations] = useState(undefined)
+  const loadDatas = () => {
+    setAccommodations(datas.accommodations)
+  }
+  useEffect(() => {
+    loadDatas()
+  })
 
   const text = {
     chezvous: 'Chez vous,',
@@ -25,6 +32,7 @@ const Home = () => {
           {accommodations.map((accommodation, index) => (
             <AccommodationCard key={index} accommodation={accommodation} />
           ))}
+          <Footer />
         </div>
       ) : (
         <Spinner />
