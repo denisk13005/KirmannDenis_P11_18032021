@@ -107,7 +107,7 @@
     width: 582px;
     display: none;
   }
-  .decriptionAndEquipments {
+  .rantalContainers {
     display: flex;
     justify-content: space-between;
     margin-top: 26px;
@@ -118,6 +118,9 @@
     .aboutContainer {
       width: 512px;
       margin: 0;
+      li {
+        list-style-type: none;
+      }
       @media screen and (max-width: 1180px) {
         width: 100%;
         margin-bottom: 20px;

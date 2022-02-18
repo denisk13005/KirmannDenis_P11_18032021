@@ -30,8 +30,8 @@ const About = () => {
     <div>
       <Header />
       <Banner background={backgroundImgBanner} />
-      {aboutDatas.map((el, index) => (
-        <DropDown key={index} el={el} />
+      {aboutDatas.map((accommodation, index) => (
+        <DropDown key={index} about={accommodation} />
       ))}
       <Footer />
     </div>

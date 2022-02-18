@@ -24,7 +24,8 @@ const RentalInformations = ({ accommodation }) => {
         </div>
       </div>
       <div className="rantalContainers">
-        <DropDown el={accommodation} />
+        <DropDown rental={accommodation} title="Description" />
+        <DropDown rental={accommodation} title="Équipements" />
       </div>
     </section>
   )
