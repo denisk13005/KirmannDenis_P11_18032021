@@ -9,11 +9,6 @@ import '../styles/pages/accommodation.scss'
 const Accommodation = () => {
   const datas = GetDatas()
   const url = window.location.hash.slice(1)
-  console.log(datas.accommodations)
-  // console.log(url)
-  // let accommodations = datas.accommodations
-  // let accommodation
-  // accommodations.forEach((el) => (el.id === url ? (accommodation = el) : null))
 
   const [accommodation, setAccommodation] = useState([])
   const loadDatas = () => {
@@ -24,7 +19,6 @@ const Accommodation = () => {
   }
 
   useEffect(() => (datas.accommodations !== undefined ? loadDatas() : null))
-  console.log(accommodation)
   return (
     <div>
       <Header />
