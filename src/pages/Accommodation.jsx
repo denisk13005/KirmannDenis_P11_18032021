@@ -4,6 +4,7 @@ import Footer from '../components/Footer'
 import Lightbox from '../components/Lightbox'
 import RentalInformations from '../components/RentalInformations'
 import GetDatas from '../components/GetDatas'
+import Spinner from '../components/Spinner'
 import '../styles/pages/accommodation.scss'
 
 const Accommodation = () => {
@@ -24,11 +25,15 @@ const Accommodation = () => {
       <Header />
       {accommodation.pictures !== undefined ? (
         <Lightbox accommodation={accommodation} />
-      ) : null}
+      ) : (
+        <Spinner />
+      )}
       {accommodation.host !== undefined ? (
-        <RentalInformations accommodation={accommodation} />
+        <>
+          <RentalInformations accommodation={accommodation} />
+          <Footer />
+        </>
       ) : null}
-      <Footer />
     </div>
   )
 }
