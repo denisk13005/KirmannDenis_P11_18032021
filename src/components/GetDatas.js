@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 
 const GetDatas = () => {
+  let [datas, setDatas] = useState([])
   useEffect(() => {
     const timer = setTimeout(() => {
       fetch('/data/datas.json')
@@ -9,7 +10,6 @@ const GetDatas = () => {
     }, 500)
     return () => clearTimeout(timer)
   }, [])
-  let [datas, setDatas] = useState([])
   return datas
 }
 
