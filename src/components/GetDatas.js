@@ -7,7 +7,7 @@ const GetDatas = () => {
       fetch('/data/datas.json')
         .then((res) => res.json())
         .then((datas) => setDatas(datas))
-    }, 500)
+    }, 100)
     return () => clearTimeout(timer)
   }, [])
   return datas
