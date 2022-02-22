@@ -7,7 +7,6 @@ import Banner from '../components/Banner'
 import about from '../assets/about.jpg'
 import aboutBig from '../assets/aboutBig.jpg'
 import GetDatas from '../components/GetDatas.js'
-import Spinner from '../components/Spinner'
 
 const About = () => {
   // console.log(window.innerWidth)
