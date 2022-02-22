@@ -6,7 +6,7 @@ const AccommodationCard = ({ accommodation }) => {
   return (
     <NavLink
       className={'link__container'}
-      to={'/accommodation/#' + accommodation.id}
+      to={'/accommodation/' + accommodation.id}
     >
       <div className="img__container">
         <img

@@ -6,20 +6,22 @@ import RentalInformations from '../components/RentalInformations'
 import GetDatas from '../components/GetDatas'
 import Spinner from '../components/Spinner'
 import '../styles/pages/accommodation.scss'
+import { useParams } from 'react-router-dom'
 
 const Accommodation = () => {
   const datas = GetDatas()
-  const url = window.location.hash.slice(1)
+  const { accommodationId } = useParams()
+  console.log(accommodationId)
 
   const [accommodation, setAccommodation] = useState([])
   const loadDatas = () => {
-    setAccommodation(datas.accommodations)
     datas.accommodations.forEach((el) =>
-      el.id === url ? setAccommodation(el) : null
+      el.id === accommodationId ? setAccommodation(el) : null
     )
   }
 
-  useEffect(() => (datas.accommodations !== undefined ? loadDatas() : null))
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  useEffect(() => (datas.accommodations ? loadDatas() : null), [loadDatas])
   return (
     <div>
       <Header />
