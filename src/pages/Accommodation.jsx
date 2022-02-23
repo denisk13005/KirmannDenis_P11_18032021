@@ -23,20 +23,20 @@ const Accommodation = () => {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => (datas.accommodations ? loadDatas() : null), [loadDatas])
   return (
-    <div>
+    <section>
       <Header />
-      {accommodation.pictures !== undefined ? (
+      {accommodation.pictures ? (
         <Lightbox accommodation={accommodation} />
       ) : (
         <Spinner />
       )}
-      {accommodation.host !== undefined ? (
-        <>
+      {accommodation.host ? (
+        <div>
           <RentalInformations accommodation={accommodation} />
           <Footer />
-        </>
+        </div>
       ) : null}
-    </div>
+    </section>
   )
 }
 

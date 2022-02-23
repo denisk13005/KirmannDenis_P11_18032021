@@ -21,6 +21,7 @@ const About = () => {
     return () => window.removeEventListener('resize', getSize)
   }, [])
   const datas = GetDatas()
+
   const [aboutDatas, setAboutData] = useState([])
   const loadAboutDatas = () => {
     setAboutData(datas.about)
@@ -33,7 +34,7 @@ const About = () => {
     <div>
       <Header />
       <Banner background={backgroundImgBanner} />
-      {aboutDatas !== undefined
+      {aboutDatas
         ? aboutDatas.map((accommodation, index) => (
             <DropDown key={index} about={accommodation} />
           ))

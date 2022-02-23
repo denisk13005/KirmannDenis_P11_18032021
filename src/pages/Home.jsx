@@ -23,11 +23,11 @@ const Home = () => {
     partout: 'partout et ailleurs',
   }
   return (
-    <div>
+    <section>
       <Header />
 
       <Banner background={background} text={text} />
-      {accommodations !== undefined ? (
+      {accommodations ? (
         <div className="homeContainer">
           {accommodations.map((accommodation, index) => (
             <AccommodationCard key={index} accommodation={accommodation} />
@@ -37,7 +37,7 @@ const Home = () => {
       ) : (
         <Spinner />
       )}
-    </div>
+    </section>
   )
 }
 
