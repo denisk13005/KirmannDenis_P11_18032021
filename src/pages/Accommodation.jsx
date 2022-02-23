@@ -3,7 +3,7 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 import Lightbox from '../components/Lightbox'
 import RentalInformations from '../components/RentalInformations'
-import fetchDatas from '../components/GetDatas'
+import fetchDatas from '../GetDatas.js'
 import Spinner from '../components/Spinner'
 import '../styles/pages/accommodation.scss'
 import { useParams } from 'react-router-dom'
@@ -16,9 +16,7 @@ const Accommodation = () => {
   useEffect(() => {
     loadDatas()
   }, [])
-  console.log(datas)
   const { accommodationId } = useParams()
-  console.log(accommodationId)
 
   const [accommodation, setAccommodation] = useState([])
   const loadAccommodation = () => {
@@ -29,7 +27,6 @@ const Accommodation = () => {
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => (datas ? loadAccommodation() : null), [datas])
-  console.log(accommodation)
   return (
     <section>
       <Header />
