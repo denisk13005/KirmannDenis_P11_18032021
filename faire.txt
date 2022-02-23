@@ -1,8 +1,0 @@
-modifier fetch
-parler moins vite
-useParam
-useEffect avec dépendance
-fetch asynchrone
-mettre getdata ds use effect
-levé les undefined
-
