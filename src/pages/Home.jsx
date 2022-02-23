@@ -5,19 +5,17 @@ import Header from '../components/Header'
 import background from '../assets/backgroundHome.png'
 import '../styles/pages/home.scss'
 import Banner from '../components/Banner'
-import GetDatas from '../components/GetDatas'
+import fetchDatas from '../components/GetDatas'
 import Spinner from '../components/Spinner'
 const Home = () => {
-  const datas = GetDatas()
-
-  const [accommodations, setAccommodations] = useState(undefined)
-  const loadDatas = () => {
-    setAccommodations(datas.accommodations)
+  const [datas, setDatas] = useState()
+  const loadDatas = async () => {
+    setDatas(await fetchDatas())
   }
   useEffect(() => {
     loadDatas()
-  })
-
+  }, [])
+  console.log(datas)
   const text = {
     chezvous: 'Chez vous,',
     partout: 'partout et ailleurs',
@@ -27,9 +25,9 @@ const Home = () => {
       <Header />
 
       <Banner background={background} text={text} />
-      {accommodations ? (
+      {datas ? (
         <div className="homeContainer">
-          {accommodations.map((accommodation, index) => (
+          {datas.accommodations.map((accommodation, index) => (
             <AccommodationCard key={index} accommodation={accommodation} />
           ))}
           <Footer />
