@@ -6,8 +6,7 @@ import DropDown from '../components/DropDown'
 import Banner from '../components/Banner'
 import about from '../assets/about.jpg'
 import aboutBig from '../assets/aboutBig.jpg'
-import GetDatas from '../components/GetDatas.js'
-import Spinner from '../components/Spinner'
+import fetchDatas from '../components/GetDatas.js'
 
 const About = () => {
   // console.log(window.innerWidth)
@@ -21,21 +20,20 @@ const About = () => {
 
     return () => window.removeEventListener('resize', getSize)
   }, [])
-  const datas = GetDatas()
-  const [aboutDatas, setAboutData] = useState([])
-  const loadAboutDatas = () => {
-    setAboutData(datas.about)
+  const [datas, setDatas] = useState()
+  const loadDatas = async () => {
+    setDatas(await fetchDatas())
   }
   useEffect(() => {
-    loadAboutDatas()
-  })
+    loadDatas()
+  }, [])
 
   return (
     <div>
       <Header />
       <Banner background={backgroundImgBanner} />
-      {aboutDatas !== undefined
-        ? aboutDatas.map((accommodation, index) => (
+      {datas
+        ? datas.about.map((accommodation, index) => (
             <DropDown key={index} about={accommodation} />
           ))
         : null}
