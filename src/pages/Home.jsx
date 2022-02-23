@@ -5,7 +5,7 @@ import Header from '../components/Header'
 import background from '../assets/backgroundHome.png'
 import '../styles/pages/home.scss'
 import Banner from '../components/Banner'
-import fetchDatas from '../components/GetDatas'
+import fetchDatas from '../GetDatas'
 import Spinner from '../components/Spinner'
 const Home = () => {
   const [datas, setDatas] = useState()
@@ -15,7 +15,6 @@ const Home = () => {
   useEffect(() => {
     loadDatas()
   }, [])
-  console.log(datas)
   const text = {
     chezvous: 'Chez vous,',
     partout: 'partout et ailleurs',

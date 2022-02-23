@@ -6,10 +6,9 @@ import DropDown from '../components/DropDown'
 import Banner from '../components/Banner'
 import about from '../assets/about.jpg'
 import aboutBig from '../assets/aboutBig.jpg'
-import fetchDatas from '../components/GetDatas.js'
+import fetchDatas from '../GetDatas.js'
 
 const About = () => {
-  // console.log(window.innerWidth)
   let [viewportWidth, setViewportWidth] = useState({})
   const getSize = () => {
     setViewportWidth(window.innerWidth)
