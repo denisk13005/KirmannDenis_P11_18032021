@@ -27,23 +27,13 @@ const About = () => {
   useEffect(() => {
     loadDatas()
   }, [])
-  console.log(datas)
-
-  const [aboutDatas, setAboutData] = useState([])
-  const loadAboutDatas = () => (datas ? setAboutData(datas.about) : null)
-
-  useEffect(() => {
-    loadAboutDatas()
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [datas])
-  console.log(aboutDatas)
 
   return (
     <div>
       <Header />
       <Banner background={backgroundImgBanner} />
-      {aboutDatas
-        ? aboutDatas.map((accommodation, index) => (
+      {datas
+        ? datas.about.map((accommodation, index) => (
             <DropDown key={index} about={accommodation} />
           ))
         : null}
