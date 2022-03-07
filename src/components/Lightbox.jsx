@@ -18,9 +18,9 @@ const Lightbox = ({ accommodation }) => {
     }
   }
   const rightArrowClassName =
-    accommodation.pictures.length !== 1 ? 'rightArrow' : null
+    accommodation.pictures.length !== 1 ? 'rightArrow' : 'none'
   let leftArrowClassName =
-    accommodation.pictures.length !== 1 ? 'leftArrow' : null
+    accommodation.pictures.length !== 1 ? 'leftArrow' : 'none'
 
   return (
     <div className="lightbox__container">

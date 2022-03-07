@@ -1,0 +1,27 @@
+Reprise du site codé en ASP.net vers React
+
+Utilisation de créate réact app
+
+
+Routage ===> useParam
+
+
+
+AccommodationCard  ====> vignette appartement sur home  ===> injection de l'id de l'appart
+
+
+
+
+Dropdown ====> descriptif valeur de l'agence(page about) ; descriptiion et équipements(RentalInformations)
+
+
+Lightbox ====> cuurrentindex initialisé a 0 ; 
+
+
+
+PAGE 404
+
+
+
+
+
