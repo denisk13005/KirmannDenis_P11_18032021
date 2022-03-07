@@ -7,6 +7,7 @@ import fetchDatas from '../GetDatas.js'
 import Spinner from '../components/Spinner'
 import '../styles/pages/accommodation.scss'
 import { useParams } from 'react-router-dom'
+import ErrorPage from './ErrorPage'
 
 const Accommodation = () => {
   const [datas, setDatas] = useState()
@@ -27,7 +28,8 @@ const Accommodation = () => {
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => (datas ? loadAccommodation() : null), [datas])
-  return (
+  console.log(accommodation.id === accommodationId)
+  return accommodation.id === accommodationId ? (
     <section>
       <Header />
       {accommodation.pictures ? (
@@ -42,6 +44,8 @@ const Accommodation = () => {
         </div>
       ) : null}
     </section>
+  ) : (
+    <ErrorPage />
   )
 }
 
