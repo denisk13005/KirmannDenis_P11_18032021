@@ -5,7 +5,7 @@ import Header from '../components/Header'
 import background from '../assets/backgroundHome.png'
 import '../styles/pages/home.scss'
 import Banner from '../components/Banner'
-import fetchDatas from '../GetDatas'
+import { fetchDatas } from '../GetDatas.js'
 import Spinner from '../components/Spinner'
 const Home = () => {
   const [datas, setDatas] = useState()

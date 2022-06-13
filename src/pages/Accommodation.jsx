@@ -3,33 +3,28 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 import Lightbox from '../components/Lightbox'
 import RentalInformations from '../components/RentalInformations'
-import fetchDatas from '../GetDatas.js'
+import { fetchAccommodations } from '../GetDatas.js'
 import Spinner from '../components/Spinner'
 import '../styles/pages/accommodation.scss'
 import { useParams } from 'react-router-dom'
 import ErrorPage from './ErrorPage'
 
 const Accommodation = () => {
-  const [datas, setDatas] = useState()
-  const loadDatas = async () => {
-    setDatas(await fetchDatas())
-  }
-  useEffect(() => {
-    loadDatas()
-  }, [])
   const { accommodationId } = useParams()
-
   const [accommodation, setAccommodation] = useState([])
-  const loadAccommodation = () => {
-    datas.accommodations.forEach((el) =>
-      el.id === accommodationId ? setAccommodation(el) : null
-    )
-  }
+  const [goodUrl, setGoodUrl] = useState(true)
 
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  useEffect(() => (datas ? loadAccommodation() : null), [datas])
-  console.log(accommodation.id === accommodationId)
-  return accommodation.id === accommodationId ? (
+  useEffect(() => {
+    const loadAccommodation = async () => {
+      setGoodUrl(true)
+      const acc = await fetchAccommodations(accommodationId)
+      console.log(acc)
+      acc ? setAccommodation(acc) : setGoodUrl(false)
+    }
+    loadAccommodation()
+  }, [accommodationId])
+
+  return goodUrl ? (
     <section>
       <Header />
       {accommodation.pictures ? (
