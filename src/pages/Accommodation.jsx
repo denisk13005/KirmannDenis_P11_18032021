@@ -17,9 +17,8 @@ const Accommodation = () => {
   useEffect(() => {
     const loadAccommodation = async () => {
       setGoodUrl(true)
-      const acc = await fetchAccommodations(accommodationId)
-      console.log(acc)
-      acc ? setAccommodation(acc) : setGoodUrl(false)
+      const accommodation = await fetchAccommodations(accommodationId)
+      accommodation ? setAccommodation(accommodation) : setGoodUrl(false)
     }
     loadAccommodation()
   }, [accommodationId])
